@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="myCalculator">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<div id="myCalculator">
+<div id="myCalculator" ng-controller="CalculatorController">
     <main>
         <section class="inc">
             <div>
@@ -54,9 +54,7 @@
             <h4>Lumens</h4>
 
             <p>Brightness <br>of bulb</p>
-            <select>
-                <option value="600">600</option>
-                <option value="900">900</option>
+            <select ng-model="current_lumens" ng-options="o as o for o in lumen_options">
             </select>
         </div>
         <div>
